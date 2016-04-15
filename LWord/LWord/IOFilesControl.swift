@@ -11,7 +11,7 @@ import Foundation
 
 
 class IOFilesControl {
-    //test github
+    
     //文件管理
     private let fManager = NSFileManager.defaultManager();
     
