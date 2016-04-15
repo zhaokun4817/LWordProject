@@ -15,11 +15,12 @@
 		BE9BE9651CBBF6CB0032F72E /* LWordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9BE9641CBBF6CB0032F72E /* LWordTests.swift */; };
 		BE9BE9701CBBF6CB0032F72E /* LWordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9BE96F1CBBF6CB0032F72E /* LWordUITests.swift */; };
 		BE9BE97F1CBBF7F50032F72E /* MessageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9BE97E1CBBF7F50032F72E /* MessageObject.swift */; };
-		BE9BE9831CBBFD6A0032F72E /* IOFilesControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9BE9821CBBFD6A0032F72E /* IOFilesControl.swift */; };
+		BE9BE9831CBBFD6A0032F72E /* IOFilesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9BE9821CBBFD6A0032F72E /* IOFilesOperation.swift */; };
 		BE9BE9881CBBFDF00032F72E /* MessageObjectsArrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9BE9871CBBFDF00032F72E /* MessageObjectsArrary.swift */; };
 		BEB46ECF1CBD3C6B0080257B /* MessageObjectBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB46ECE1CBD3C6B0080257B /* MessageObjectBusiness.swift */; };
 		BEE0AB721CBCE36100545B1D /* AboutNSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0AB711CBCE36100545B1D /* AboutNSDate.swift */; };
 		BEE0AB741CBCE7A100545B1D /* GetSomeLocalSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0AB731CBCE7A100545B1D /* GetSomeLocalSetting.swift */; };
+		BEEDCD2B1CC0BEB500A550BB /* FileOperationEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEDCD2A1CC0BEB500A550BB /* FileOperationEnums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,11 +55,12 @@
 		BE9BE96F1CBBF6CB0032F72E /* LWordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWordUITests.swift; sourceTree = "<group>"; };
 		BE9BE9711CBBF6CB0032F72E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE9BE97E1CBBF7F50032F72E /* MessageObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageObject.swift; sourceTree = "<group>"; };
-		BE9BE9821CBBFD6A0032F72E /* IOFilesControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOFilesControl.swift; sourceTree = "<group>"; };
+		BE9BE9821CBBFD6A0032F72E /* IOFilesOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOFilesOperation.swift; sourceTree = "<group>"; };
 		BE9BE9871CBBFDF00032F72E /* MessageObjectsArrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageObjectsArrary.swift; sourceTree = "<group>"; };
 		BEB46ECE1CBD3C6B0080257B /* MessageObjectBusiness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageObjectBusiness.swift; sourceTree = "<group>"; };
 		BEE0AB711CBCE36100545B1D /* AboutNSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutNSDate.swift; sourceTree = "<group>"; };
 		BEE0AB731CBCE7A100545B1D /* GetSomeLocalSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSomeLocalSetting.swift; sourceTree = "<group>"; };
+		BEEDCD2A1CC0BEB500A550BB /* FileOperationEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileOperationEnums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,10 +145,11 @@
 		BE9BE97D1CBBF74B0032F72E /* Business */ = {
 			isa = PBXGroup;
 			children = (
-				BE9BE9821CBBFD6A0032F72E /* IOFilesControl.swift */,
+				BE9BE9821CBBFD6A0032F72E /* IOFilesOperation.swift */,
 				BEE0AB711CBCE36100545B1D /* AboutNSDate.swift */,
 				BEE0AB731CBCE7A100545B1D /* GetSomeLocalSetting.swift */,
 				BEB46ECE1CBD3C6B0080257B /* MessageObjectBusiness.swift */,
+				BEEDCD2A1CC0BEB500A550BB /* FileOperationEnums.swift */,
 			);
 			name = Business;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEEDCD2B1CC0BEB500A550BB /* FileOperationEnums.swift in Sources */,
 				BEE0AB741CBCE7A100545B1D /* GetSomeLocalSetting.swift in Sources */,
 				BEE0AB721CBCE36100545B1D /* AboutNSDate.swift in Sources */,
 				BE9BE97F1CBBF7F50032F72E /* MessageObject.swift in Sources */,
@@ -299,7 +303,7 @@
 				BE9BE9501CBBF6CB0032F72E /* AppDelegate.swift in Sources */,
 				BE9BE9881CBBFDF00032F72E /* MessageObjectsArrary.swift in Sources */,
 				BEB46ECF1CBD3C6B0080257B /* MessageObjectBusiness.swift in Sources */,
-				BE9BE9831CBBFD6A0032F72E /* IOFilesControl.swift in Sources */,
+				BE9BE9831CBBFD6A0032F72E /* IOFilesOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
