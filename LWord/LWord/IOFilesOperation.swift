@@ -57,7 +57,7 @@ class IOFilesOperation {
     }
     
     //留言记录文件路径
-    private var recordFilePath: String {
+    var recordFilePath: String {
         return self.recordFileDirectory + "/msgRecord.plist";
     }
     
@@ -79,6 +79,7 @@ class IOFilesOperation {
             do{
                 try fManager.createDirectoryAtPath(self.recordFileDirectory,
                         withIntermediateDirectories: true, attributes: nil);
+                //如果创建成功说执行成功
                 resBool = self.direcotryOrFileIsExist(existsType: ExistsType.RecordDirectoryIsExists);
             }catch {
                 resBool = false;
@@ -113,13 +114,5 @@ class IOFilesOperation {
     }
     
     //TODO:ReadRecordFile
-    
-    //TODO:WriteRecordFile
-    func writeRecordFile(messages msgs: NSDictionary) -> Bool {
-        var resBool = false;
-        let path = self.recordFilePath;
-        resBool = msgs.writeToFile(path, atomically: true);
-        return resBool;
-    }
     
 }
