@@ -13,24 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    
+    static var firstRun = false;
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         //改变firstlaunch值 以后就可以判断是否第一次运行
         //NSUserDefaults.standardUserDefaults().setBool(false, forKey: "firstLaunch");
-        if !NSUserDefaults.standardUserDefaults().boolForKey("firstLaunch"){
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstLaunch");
-            
-            var ioFile:IOFilesOperation? = IOFilesOperation();
-            ioFile!.createRecordFileDirecotry();
-            ioFile = nil;
-            var msgArr:MessageObjectsArrary? = MessageObjectsArrary();
-            do {
-                msgArr!.addNewMessageObjectToTheEnd(newMessageObject: MessageObject());
-                try msgArr!.writeRecordsToFile();
-                msgArr = nil;
-            }catch {}
-        }
+        //if !NSUserDefaults.standardUserDefaults().boolForKey("firstLaunch"){
+        //    AppDelegate.firstRun = (!NSUserDefaults.standardUserDefaults().boolForKey("firstLaunch"));
+        //    NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstLaunch");
+        //}
         return true
     }
 

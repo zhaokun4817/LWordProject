@@ -87,20 +87,17 @@ class MessageObject: NSObject{
         localSetting = nil;//析构
         
         //由默认语言设置信息文本
-        switch defaultLanguage {
-        case "zh-Hans-US": //中文简体
+        if defaultLanguage.hasPrefix("zh-Hans") { //中文简体
             frmWho = "开发者";
             msgContent = "您好！非常感谢您使用LWord留言工具，如果您对LWord有任何改进" +
                 "建议或者您有任何好的主意都可以E-Mail至:zhaokun4817@gmail.com。" +
             "最后再次感谢您选择了LWord!";
-            
-        case "zh-Hant-US": //中文繁体
+        } else if defaultLanguage.hasPrefix("zh-Hant") {//中文繁体
             frmWho = "開發者";
             msgContent = "您好！非常感謝您使用LWord留言工具，如果您對LWord有任何改進" +
                 "建議或者您有任何好的主意都可以E-Mail至:zhaokun4817@gmail.com。" +
             "最後再次感謝您選擇了LWord!";
-            
-        default:           //默认英语
+        } else {         //默认英语
             frmWho = "Developer";
             msgContent = "Dear User!Thanks very much for you choice this " +
                 "'LWord' app, if you have any suggest or any good ideas " +

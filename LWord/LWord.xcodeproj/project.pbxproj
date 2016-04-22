@@ -143,6 +143,7 @@
 		BE9BE97D1CBBF74B0032F72E /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				BE9BE9871CBBFDF00032F72E /* MessageObjectsOperation.swift */,
 				BE9BE9821CBBFD6A0032F72E /* IOFilesOperation.swift */,
 				BEE0AB711CBCE36100545B1D /* AboutNSDate.swift */,
 				BEE0AB731CBCE7A100545B1D /* GetSomeLocalSetting.swift */,
@@ -155,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				BE9BE97E1CBBF7F50032F72E /* MessageObject.swift */,
-				BE9BE9871CBBFDF00032F72E /* MessageObjectsOperation.swift */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -228,6 +228,7 @@
 				TargetAttributes = {
 					BE9BE94B1CBBF6CB0032F72E = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = WSAZM2P2H5;
 					};
 					BE9BE95F1CBBF6CB0032F72E = {
 						CreatedOnToolsVersion = 7.3;
@@ -442,10 +443,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LWord/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.codercool.LWord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -455,10 +458,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LWord/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.codercool.LWord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

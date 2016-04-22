@@ -112,7 +112,4 @@ class IOFilesOperation {
         }
         return resBool;
     }
-    
-    //TODO:ReadRecordFile
-    
 }
