@@ -89,24 +89,24 @@ class MessageObject: NSObject{
         //由默认语言设置信息文本
         if defaultLanguage.hasPrefix("zh-Hans") { //中文简体
             frmWho = "开发者";
-            msgContent = "您好！非常感谢您使用LWord留言工具，如果您对LWord有任何改进" +
-                "建议或者您有任何好的主意都可以E-Mail至:zhaokun4817@gmail.com。" +
-            "最后再次感谢您选择了LWord!";
+            msgContent = "您好！\n  非常感谢您使用LWord留言工具。\n  如果您对LWord有任何改进" +
+                "建议或者您有任何好的主意都可以EMail至: zhaokun4817@gmail.com。\n" +
+            "  最后再次感谢您选择了LWord!";
         } else if defaultLanguage.hasPrefix("zh-Hant") {//中文繁体
             frmWho = "開發者";
-            msgContent = "您好！非常感謝您使用LWord留言工具，如果您對LWord有任何改進" +
-                "建議或者您有任何好的主意都可以E-Mail至:zhaokun4817@gmail.com。" +
-            "最後再次感謝您選擇了LWord!";
+            msgContent = "您好！\n  非常感謝您使用LWord留言工具。\n  如果您對LWord有任何改進" +
+                "建議或者您有任何好的主意都可以EMail至: zhaokun4817@gmail.com。\n" +
+            "  最後再次感謝您選擇了LWord!";
         } else {         //默认英语
             frmWho = "Developer";
-            msgContent = "Dear User!Thanks very much for you choice this " +
-                "'LWord' app, if you have any suggest or any good ideas " +
-                "please E-Mail to:zhaokun4817@gmail.com.Before end of this " +
-            "message,thanks for your choice 'LWord' again! Have a good day!";
+            msgContent = "Dear User!\n Thanks very much for you choice this " +
+                "'LWord' app.\n if you have any suggest or any good ideas " +
+                "please EMail to: zhaokun4817@gmail.com.\n Before end of this " +
+            "message,thanks for your choice 'LWord' again! \n Have a good day!";
         }
         var abDate: AboutNSDate? = AboutNSDate();
         let fstMessage = [abDate!.getNowTimeString(formatStr: "yyyyMMddHHmmss"),
-                                       abDate!.getNowTimeString(formatStr: ""),
+                                       abDate!.getNowTimeString(formatStr: "yyyy-MM-dd HH:mm"),
                                         frmWho, msgContent];
         
         abDate = nil;

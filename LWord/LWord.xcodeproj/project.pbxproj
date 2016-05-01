@@ -17,8 +17,10 @@
 		BE9BE97F1CBBF7F50032F72E /* MessageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9BE97E1CBBF7F50032F72E /* MessageObject.swift */; };
 		BE9BE9831CBBFD6A0032F72E /* IOFilesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9BE9821CBBFD6A0032F72E /* IOFilesOperation.swift */; };
 		BE9BE9881CBBFDF00032F72E /* MessageObjectsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9BE9871CBBFDF00032F72E /* MessageObjectsOperation.swift */; };
+		BED9EA561CD4BB900088F933 /* MSGDetailesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED9EA551CD4BB900088F933 /* MSGDetailesController.swift */; };
 		BEE0AB721CBCE36100545B1D /* AboutNSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0AB711CBCE36100545B1D /* AboutNSDate.swift */; };
 		BEE0AB741CBCE7A100545B1D /* GetSomeLocalSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE0AB731CBCE7A100545B1D /* GetSomeLocalSetting.swift */; };
+		BEE9ED601CCCA98600C1BD9F /* MyUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE9ED5F1CCCA98600C1BD9F /* MyUITableViewCell.swift */; };
 		BEEDCD2B1CC0BEB500A550BB /* FileOperationEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEDCD2A1CC0BEB500A550BB /* FileOperationEnums.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,8 +58,10 @@
 		BE9BE97E1CBBF7F50032F72E /* MessageObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageObject.swift; sourceTree = "<group>"; };
 		BE9BE9821CBBFD6A0032F72E /* IOFilesOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOFilesOperation.swift; sourceTree = "<group>"; };
 		BE9BE9871CBBFDF00032F72E /* MessageObjectsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageObjectsOperation.swift; sourceTree = "<group>"; };
+		BED9EA551CD4BB900088F933 /* MSGDetailesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSGDetailesController.swift; sourceTree = "<group>"; };
 		BEE0AB711CBCE36100545B1D /* AboutNSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutNSDate.swift; sourceTree = "<group>"; };
 		BEE0AB731CBCE7A100545B1D /* GetSomeLocalSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSomeLocalSetting.swift; sourceTree = "<group>"; };
+		BEE9ED5F1CCCA98600C1BD9F /* MyUITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUITableViewCell.swift; sourceTree = "<group>"; };
 		BEEDCD2A1CC0BEB500A550BB /* FileOperationEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileOperationEnums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +117,8 @@
 				BE9BE9861CBBFD790032F72E /* Objects */,
 				BE9BE97D1CBBF74B0032F72E /* Business */,
 				BE9BE94F1CBBF6CB0032F72E /* AppDelegate.swift */,
+				BED9EA551CD4BB900088F933 /* MSGDetailesController.swift */,
+				BEE9ED5F1CCCA98600C1BD9F /* MyUITableViewCell.swift */,
 				BE9BE9511CBBF6CB0032F72E /* ViewController.swift */,
 				BE9BE9531CBBF6CB0032F72E /* Main.storyboard */,
 				BE9BE9561CBBF6CB0032F72E /* Assets.xcassets */,
@@ -296,8 +302,10 @@
 				BEEDCD2B1CC0BEB500A550BB /* FileOperationEnums.swift in Sources */,
 				BEE0AB741CBCE7A100545B1D /* GetSomeLocalSetting.swift in Sources */,
 				BEE0AB721CBCE36100545B1D /* AboutNSDate.swift in Sources */,
+				BED9EA561CD4BB900088F933 /* MSGDetailesController.swift in Sources */,
 				BE9BE97F1CBBF7F50032F72E /* MessageObject.swift in Sources */,
 				BE9BE9521CBBF6CB0032F72E /* ViewController.swift in Sources */,
+				BEE9ED601CCCA98600C1BD9F /* MyUITableViewCell.swift in Sources */,
 				BE9BE9501CBBF6CB0032F72E /* AppDelegate.swift in Sources */,
 				BE9BE9881CBBFDF00032F72E /* MessageObjectsOperation.swift in Sources */,
 				BE9BE9831CBBFD6A0032F72E /* IOFilesOperation.swift in Sources */,

@@ -13,15 +13,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    static var firstRun = false;
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        //改变firstlaunch值 以后就可以判断是否第一次运行
-        //NSUserDefaults.standardUserDefaults().setBool(false, forKey: "firstLaunch");
-        //if !NSUserDefaults.standardUserDefaults().boolForKey("firstLaunch"){
-        //    AppDelegate.firstRun = (!NSUserDefaults.standardUserDefaults().boolForKey("firstLaunch"));
-        //    NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstLaunch");
-        //}
+        /*let navigat = UINavigationController()
+        let vcw = MSGDetailesController(nibName: "msgDetailes", bundle: nil)
+        
+        // Push the vcw  to the navigat
+        navigat.pushViewController(vcw, animated: false)
+        
+        // Set the window’s root view controller
+        self.window!.rootViewController = navigat
+        
+        // Present the window
+        self.window!.makeKeyAndVisible()*/
         return true
     }
 

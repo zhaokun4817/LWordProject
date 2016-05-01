@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MessageObjectsArrary{
+class MessageObjectsOperation{
     var items: NSMutableArray?;
     
     init(){};
@@ -21,7 +21,7 @@ class MessageObjectsArrary{
             ];
         do {
             self.readFileToNSArray();
-            self.items!.addObject(newNSArr);
+            self.items!.insertObject(newNSArr, atIndex: 0);
             try self.writeNSArrayToFile();
         }catch let err as MessageObjectsArrayWarning {
             throw err;
@@ -41,7 +41,7 @@ class MessageObjectsArrary{
         var ioFile:IOFilesOperation? = IOFilesOperation();
         resBool = self.items!.writeToFile(ioFile!.recordFilePath, atomically: true);
         ioFile = nil;
-        self.items = nil;
+        
         return resBool;
     }
     
@@ -65,8 +65,6 @@ class MessageObjectsArrary{
         return resWarning;
     }
     
-    
-    
     //根据索引删除一条记录
     func removeOneRecordAtIndex(index ind:Int) throws -> Bool {
         let resBool: Bool;
@@ -75,12 +73,12 @@ class MessageObjectsArrary{
             let oldCount = self.items!.count;
             
             self.items!.removeObjectAtIndex(ind);
-            
             try self.writeNSArrayToFile();
+            
             self.readFileToNSArray();
             let newCount = self.items!.count;
             resBool = ((oldCount - newCount) == 1 ? true : false);
-            self.items = nil;
+            
             return resBool;
         }catch let err as MessageObjectsArrayWarning {
             throw err;
@@ -102,28 +100,37 @@ class MessageObjectsArrary{
             self.readFileToNSArray();
             let newCount = self.items!.count;
             resBool = ((oldCount - newCount) == 1 ? true : false);
-            self.items = nil;
+            
             return resBool;
         } catch let err as MessageObjectsArrayWarning {
             throw err;
         }
     }
     
-    //search by keyword
-    func searchMessagesByKeyword(keyword kword: String) throws -> NSArray? {
-        guard kword != "" else {
-            throw MessageObjectsArrayWarning.TheMessageObjectsArrayIsEmpty
+    //根据msgID删除一组留言记录
+    func removeRecordsByMsgIDArray(msgIDArr idArr:[String]) -> Bool {
+        //TODO:NEED TO DO
+        let resBool:Bool;
+        do{
+            self.readFileToNSArray();
+            let oldCount = self.items!.count;
+            
+            let rmArr = self.items!.filter {
+                let dict = $0 as! NSDictionary;
+                return idArr.contains(dict.objectForKey("msgID") as! String);
+            }
+            self.items!.removeObjectsInArray(rmArr);
+            
+            try self.writeNSArrayToFile();
+                
+            self.readFileToNSArray();
+            let newCount = self.items!.count;
+            resBool = ((oldCount - newCount) == idArr.count ? true : false);
+        }catch{
+            resBool = false;
         }
-        self.readFileToNSArray();
-        let searchStr = "msgID like[c] " + kword +
-            "* or msgDate like[c] " + kword + "* or msgFromWho like[c] " + kword +
-            "* or msgContent like[c] " + kword + "*";
-        let predicate = NSPredicate(format: searchStr);
-        let resArr = self.items!.filteredArrayUsingPredicate(predicate);
-        return resArr;
+        return resBool;
     }
-    
-    //TODO:删除一组留言记录
     
     //清空留言文件
     func removeAllRecords() throws -> Bool {
@@ -133,6 +140,7 @@ class MessageObjectsArrary{
             var ioFile: IOFilesOperation? = IOFilesOperation();
             resBool = NSMutableArray().writeToFile(ioFile!.recordFilePath, atomically: true);
             ioFile = nil;
+            self.items = NSMutableArray();
         }
         return resBool;
     }
